@@ -20,3 +20,7 @@ tableData.forEach(function(ufo) {
     list.append(tableData);
   });
 });
+
+// get a handle on botton 
+
+var button = d3.select("#filter-btn");
