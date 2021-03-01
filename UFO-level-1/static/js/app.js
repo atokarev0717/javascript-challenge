@@ -23,3 +23,11 @@ tableData.forEach(function(ufo) {
 // get a handle on botton 
 
 var button = d3.select("#filter-btn");
+button.on("click", FilterTable);
+
+function FilterTable() {
+
+    d3.event.preventDefault();
+    tbody.html("")
+
+}
