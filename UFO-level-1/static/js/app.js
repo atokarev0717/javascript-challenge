@@ -27,7 +27,18 @@ button.on("click", FilterTable);
 
 function FilterTable() {
 
+    // avoid refreshing
     d3.event.preventDefault();
+
+    // Clear existing data in the table
     tbody.html("")
+
+    // Select the entry field
+    var EntryField = d3.select("#datetime");
+
+    //store the entered date 
+    var EnteredDate = EntryField.property("value");
+
+    console.log(EnteredDate);
 
 }
