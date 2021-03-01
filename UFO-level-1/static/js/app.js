@@ -41,4 +41,10 @@ function FilterTable() {
 
     console.log(EnteredDate);
 
+    // Modify data to filter by the entered date
+
+    var FilteredTable = tableData.filter(filter => filter.datetime === EnteredDate);
+
+    
+
 }
