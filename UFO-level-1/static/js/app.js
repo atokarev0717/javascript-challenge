@@ -20,5 +20,3 @@ tableData.forEach(function(ufo) {
     list.append(tableData);
   });
 });
-
-console.log(tableData)
