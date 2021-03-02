@@ -34,22 +34,32 @@ function FilterTable() {
     tbody.html("")
 
     // Select and store all enetered values
-    var filter = [];
+    var filterList = [];
     var EnteredDate = d3.select("#datetime").property("value");
     var EnteredCity = d3.select("#city").property("value");
-    var EntereState = d3.select("#state").property("value");
+    var EnteredState = d3.select("#state").property("value");
     var EnteredCountry = d3.select("#country").property("value");
     var EnteredShape = d3.select("#shape").property("value");
-    filter.push(EnteredDate, EnteredCity, EntereState, EnteredCountry, EnteredShape);
+    filterList.push(EnteredDate, EnteredCity, EnteredState, EnteredCountry, EnteredShape);
 
 
     // Modify data to filter by the entered date
+ 
+    var FilteredTable = tableData
+    if (EnteredDate==="") {FilteredTable=FilteredTable}
+    else {FilteredTable= FilteredTable.filter(filter => filter.datetime === EnteredDate)};
 
-    var FilteredTable = tableData.filter(filter => filter.datetime === EnteredDate);
-    FilteredTable = tableData.filter(filter => filter.city === EnteredCity);
-    FilteredTable = tableData.filter(filter => filter.state === EntereState);
-    FilteredTable = tableData.filter(filter => filter.country === EnteredCountry);
-    FilteredTable = tableData.filter(filter => filter.shape === EnteredShape);
+    if (EnteredCity==="") {FilteredTable=FilteredTable}
+    else {FilteredTable= FilteredTable.filter(filter => filter.city === EnteredCity)};
+
+    if (EnteredState==="") {FilteredTable=FilteredTable}
+    else {FilteredTable= FilteredTable.filter(filter => filter.state === EnteredState)};
+
+    if (EnteredCountry==="") {FilteredTable=FilteredTable}
+    else {FilteredTable= FilteredTable.filter(filter => filter.state === EnteredState)};
+
+    if (EnteredShape==="") {FilteredTable=FilteredTable}
+    else {FilteredTable= FilteredTable.filter(filter => filter.shape === EnteredShape)};
 
     // Enter new data into the table
 
@@ -68,8 +78,8 @@ function FilterTable() {
     });
     console.log(EnteredDate);
     console.log(EnteredCity);
-    console.log(EntereState);
+    console.log(EnteredState);
     console.log(EnteredCountry);
     console.log(EnteredShape);
-    console.log(filter);
+    console.log(filterList);
 }
