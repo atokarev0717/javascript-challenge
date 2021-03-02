@@ -45,6 +45,20 @@ function FilterTable() {
 
     var FilteredTable = tableData.filter(filter => filter.datetime === EnteredDate);
 
-    
+    // Enter new data into the table
+
+    FilteredTable.forEach(function(ufo) {
+        console.log(ufo);
+        var row = tbody.append("tr");
+
+        Object.entries(ufo).forEach(function([key, value]) {
+            console.log(key, value);
+            var cell = row.append("td");
+            cell.text(value);
+            var list = d3.select(".table table-striped");
+            list.append(tableData);
+          });
+
+    });
 
 }
