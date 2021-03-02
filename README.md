@@ -9,4 +9,4 @@ There is just one tiny problem though... our collection is too large to search t
 ## The Goal
 The goal was to create a basic HTML Page that allows to  filter data by date and diplays the information based on the entered date
 
-[The HTML Page Outcome](./UFO-level-1/static/images/htmlpage.png)
+[The HTML Page Outcome](./UFO-level-1/static/images/ufo_multiple_cond.png)
